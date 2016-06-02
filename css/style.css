@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color: #003153;
+	font-family:Cambria, "Hoefler Te;xt", "Liberation Serif", Times, "Times New Roman", serif
+}
+
+ul#sidenav {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul#sidenav a:link, a:visited {
+	display: block;
+	background-color: dodgerblue;
+	color: white;
+	padding: 10px 20px 10px 10px;
+	text-decoration: none;
+	
+	/* code from w3schools for menu transitions */
+ 	-o-transition:color .2s ease-out, background .2s ease-in;
+ 	-ms-transition:color .2s ease-out, background .2s ease-in;
+ 	-moz-transition:color .2s ease-out, background .2s ease-in;
+ 	-webkit-transition:color .2s ease-out, background .2s ease-in;
+ 	transition:color .2s ease-out, background .2s ease-in;
+}
+ul#sidenav a:hover, a:active{
+	background-color: #6CF;
+	color: black;
+}
+#wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 900px;
+}
+.block{
+	background-color:#F4FFFF;
+	padding: 0px;
+	margin: 0px;
+}
+.block p{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+div#sidenav{
+	float: left;
+}
+div#masthead{
+	background-color: #F4FFFF;
+	padding = 20px;
+	margin-top: -21px;
+	background-image: url(../images/garde.jpg);
+	height: 220px;
+	text-align: center;
+}
+
+#galleryContainer{  
+ 	margin-top: 50px;
+	width:900px;  
+	color:#FFFFFF;  
+	position:absolute;   
+	overflow:hidden;  
+	border-radius: 10px 10px 10px 10px;
+}  
+
+      
+.content{  
+	position:relative;  
+}  
