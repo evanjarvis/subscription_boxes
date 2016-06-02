@@ -51,10 +51,16 @@ div#sidenav{
 div#masthead{
 	background-color: #F4FFFF;
 	padding = 20px;
-	margin-top: -21px;
 	background-image: url(../images/MyAbroadBox_wordmark.png);
-	height: 220px;
+	height: 270px;
 	text-align: center;
+	background-size:900px 270px;
+	
+}
+div#pageblock{
+	background-color: #F4FFFF;
+	display: inline-block;
+	height: 500px;	
 }
 
 #galleryContainer{  
