@@ -59,10 +59,8 @@ div#masthead{
 }
 div#pageblock{
 	background-color: #F4FFFF;
-	display: inline-block;
 	height: 500px;	
 }
-
 #galleryContainer{  
  	margin-top: 50px;
 	width:900px;  
@@ -75,4 +73,6 @@ div#pageblock{
       
 .content{  
 	position:relative;  
+	padding-left: 19px;
+	padding-top: 20px;
 }  
