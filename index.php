@@ -20,10 +20,8 @@
 	<div id="pageblock">
 		<div class="block" style="width: 75%; float:left">
 		<div id="content">
-		<div id="guts">
-			<p>Welcome to our page! This site is under construction.  We are a subscription-box service for students studying abroad.  Be sure to check back later when our site is live!</p>
-			<p>We are building this site with the awesome HTML and Javascript skills learned in CPSC 348 (with a bit of jQuery too!)</p>
-		</div> <!--end guts-->
+			<?php include("templates/home.php");
+			?>
 		</div> <!--end content-->
 		</div> <!-- end block-->
 		<div class="block" style="width:25%; float:right">

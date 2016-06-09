@@ -15,11 +15,10 @@ $(document).ready(function(){
     });
 	
 	$(window).bind('hashchange', function(){
-		
+
 		newHash = window.location.hash.substring(1);
 		
 		if (newHash) {
-			
 			$wrapper
 				.find("#guts")
 				.fadeOut(200, function(){ 
