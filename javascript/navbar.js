@@ -1,2 +1,2 @@
 // Side navigation bar
-$("#nav01").load("./sidenav.html");
+$("#nav01").load("./sidenav.php");
