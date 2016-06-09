@@ -2,7 +2,7 @@ function logout(){
 	//$.get("../templates/functions.php");
 	alert("Now logging out");
 $.ajax({
-      url:'javascript/functions.php',
+      url:'javascript/logout.php',
       complete: function (response) {
           $('#guts').html(response.responseText);
       },
@@ -13,3 +13,22 @@ $.ajax({
   return false;
 }
 
+function login(){
+	u = document.getElementById('username').value;
+	p = document.getElementById('password').value;
+	alert(u.p);
+/*
+	$.ajax({
+		url:'../templates/login.php',
+		type: "POST",
+		data: {u:username,p:password},
+		complete: function(response) {
+			$('#guts').html(response.responseText);
+		},
+		error: function () {
+			$('#guts').html('An error has occured!');
+		}
+	});
+	alert("login done");
+	return false;*/
+}
