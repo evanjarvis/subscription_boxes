@@ -4,9 +4,10 @@
 		<title></title>
 	</head>
 	<body>
+	<form> 
 	<?php
 		//establish database connection
-		include('mydbinfo.php');
+		include('dbinfo.php');
 		$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 		if(!$conn){
