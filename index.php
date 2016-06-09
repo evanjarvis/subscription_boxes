@@ -8,6 +8,7 @@
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
 <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
 <script src="load_content.js"></script>
+<script src="javascript/functions.js"></script>
 </head>
 
 <body>
