@@ -1,7 +1,7 @@
 	<?php
-	session_start(); 
-	$_SESSION["username"] = 'Altarian';
-	session_unset();
+	//session_start(); 
+	//$_SESSION["username"] = 'Altarian';
+	//session_unset();
  ?>
 	
 	<ul id="sidenav">
