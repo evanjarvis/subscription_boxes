@@ -11,9 +11,9 @@ if (isset($_SESSION["username"]) && !empty(!$session["username"])){
 } else {
 	echo('
 		<h3>DISPLAY IF NO SESSION:</h3>
-		<form id="login" method="POST" onsubmit="login()">
-		<input type="text" placeholder="Username" id="username" required><br>
-		<input type="password" placeholder="Password" id="password" style="margin-top:5px" required><br>
+		<form id="login" method="POST" action="templates/login.php">
+		<input type="text" placeholder="Username" name="username" required><br>
+		<input type="password" placeholder="Password" name="password" style="margin-top:5px" required><br>
 		<input type="submit" value="Login" style="margin-top:5px">
 		</form>
 		<p>New user? <a href="new_account.php">Create an Account</a></p>

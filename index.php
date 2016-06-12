@@ -13,10 +13,10 @@
 <body>
 
 <div id="wrapper">
-	<div id="masthead">
+	<a href="home.php"><div id="masthead">
 <!--		<h1>EagleBox</h1>
         <h3>(Study-Abroad subscripton box service)</h3> -->
-	</div> <!-- end masthead -->
+	</div></a> <!-- end masthead -->
 	<div id="pageblock">
 		<div class="block" style="width: 75%; float:left">
 		<div id="content">
