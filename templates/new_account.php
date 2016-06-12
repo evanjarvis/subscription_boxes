@@ -7,7 +7,7 @@
 	Last name:<br>
 	<input type="text" id="last_name" name="last_name" required/><br>
 	Email:<br>
-	<input type="text" id="email" name="email" required><br>
+	<input type="email" id="email" name="email" required><br>
 	Shipping address for boxes:<br>
 	<input type="text" id="address" name="address" required><br>
 	Create password:<br>
