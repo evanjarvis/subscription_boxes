@@ -127,6 +127,6 @@
 </div> <!-- end wrapper -->
 <div id="galleryContainer"></div>
 <script src="../javascript/functions.js"></script>
-<script src="../javascript/navbar.js"></script>
+<script src="/javascript/navbar.js"></script>
 </body>
 </html>
