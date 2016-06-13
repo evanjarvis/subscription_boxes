@@ -32,3 +32,12 @@ function login(){
 	alert("login done");
 	return false;*/
 }
+
+function checked(){
+	var max = 3;
+	$('input.favorite').on('change', function(evt) {
+		if($(this).siblings(':checked').length >= max){
+			this.checked = false;
+		}
+	});
+}

@@ -60,6 +60,8 @@ div#masthead{
 div#pageblock{
 	background-color: #F4FFFF;
 	height: 500px;	
+	width: 900px;
+	display: table;
 }
 #galleryContainer{  
  	margin-top: 50px;

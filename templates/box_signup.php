@@ -1,6 +1,15 @@
 <div id="guts">
+
+<?php
+	/*include('dbinfo.php');
+	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	if(!$conn){
+		echo ("<p> Unable to process your request.\nPlease try again later.</p>");
+		exit();
+	}*/
+?>
 	
-<form id="box_register" action="templates/box_register.php" method="POST">
+<form id="box_register" action="templates/box_processing.php" method="POST">
 	<h3>Signup for new subscription:</h3>
 	Email:<br>
 	<input type="email" id="email" name="email" required><br>
@@ -56,6 +65,26 @@
 		<option value="small">Small</option>
 		<option value="large">Large</option>
 	</select><br>
+	Select 3 favorites you might like to receive each box:<br>
+	<?php
+        	include('dbinfo.php');
+        	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+        	if(!$conn){
+                	echo ("<p> Unable to process your request.\nPlease try again later.</p>");
+       		        exit();
+	        }
+
+
+		$query = "SELECT name FROM items";
+		$result = @mysqli_query($conn, $query);
+		if(!$result){
+			die('Could not query:' . mysqli_error());
+		}
+		for($i=0; $i < mysqli_num_rows($result); $i++){
+			$row = mysqli_fetch_row($result);
+			echo ('<input class="favorite" type="checkbox" name="favorite" value="' . $row[0] . '">' . $row[0] . '<br>');
+		}	
+	?>
 	
 	<input type="submit" name="submit" value="Submit Subscription" required/>
 </form>
