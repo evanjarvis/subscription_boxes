@@ -10,7 +10,6 @@ if (isset($_SESSION["username"]) && !empty(!$session["username"])){
 		');
 } else {
 	echo('
-		<h3>DISPLAY IF NO SESSION:</h3>
 		<form id="login" method="POST" action="templates/login.php">
 		<input type="text" placeholder="Username" name="username" required><br>
 		<input type="password" placeholder="Password" name="password" style="margin-top:5px" required><br>
