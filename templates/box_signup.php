@@ -1,15 +1,6 @@
 <div id="guts">
-
-<?php
-	/*include('dbinfo.php');
-	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-	if(!$conn){
-		echo ("<p> Unable to process your request.\nPlease try again later.</p>");
-		exit();
-	}*/
-?>
 	
-<form id="box_register" action="templates/box_processing.php" method="POST">
+<form id="box_register" name="box" action="templates/box_processing.php" method="POST">
 	<h3>Signup for new subscription:</h3>
 	Email:<br>
 	<input type="email" id="email" name="email" required><br>
@@ -82,11 +73,10 @@
 		}
 		for($i=0; $i < mysqli_num_rows($result); $i++){
 			$row = mysqli_fetch_row($result);
-			echo ('<input class="favorite" type="checkbox" name="favorite" value="' . $row[0] . '">' . $row[0] . '<br>');
+			echo ('<input type="checkbox" name="favorite" onchange="checkBox(this)" value="' . $row[0] . '">' . $row[0] . '<br>');
 		}	
 	?>
 	
 	<input type="submit" name="submit" value="Submit Subscription" required/>
 </form>
-
 </div>
