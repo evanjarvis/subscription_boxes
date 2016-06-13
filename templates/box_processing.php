@@ -78,37 +78,37 @@
 			}
 
 			if(empty($_POST['box_freq'])){
-				$sub_length = FALSE;
+				$box_freq = FALSE;
 				$msg .= '<p>You must select a delivery frequency.</p>';
 			} else {
-				$sub_length = mysqli_real_escape_string($conn, $_POST['box_freq']);
+				$box_freq = mysqli_real_escape_string($conn, $_POST['box_freq']);
 			}
 
 			if(empty($_POST['box_size'])){
-				$sub_length = FALSE;
+				$box_size = FALSE;
 				$msg .= '<p>You must select a box size.</p>';
 			} else {
-				$sub_length = mysqli_real_escape_string($conn, $_POST['box_size']);
+				$box_size = mysqli_real_escape_string($conn, $_POST['box_size']);
 			}
 
-			if(empty($_POST['favorite1'])){
+			if(empty($_POST['favorite'][0])){
 				$favorite1 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$sub_length = mysqli_real_escape_string($conn, $_POST['favorite1']);
+				$favorite1 = mysqli_real_escape_string($conn, $_POST['favorite1']);
 			}
-			if(empty($_POST['favorite1'])){
-				$favorite1 = FALSE;
+			if(empty($_POST['favorite'][1])){
+				$favorite2 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$sub_length = mysqli_real_escape_string($conn, $_POST['favorite2']);
+				$favorite2 = mysqli_real_escape_string($conn, $_POST['favorite2']);
 			}
 
-			if(empty($_POST['favorite1'])){
-				$favorite1 = FALSE;
+			if(empty($_POST['favorite'][2])){
+				$favorite3 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$sub_length = mysqli_real_escape_string($conn, $_POST['favorite3']);
+				$favorite3 = mysqli_real_escape_string($conn, $_POST['favorite3']);
 			}
 
 			if(empty($_POST['preferences'])){
