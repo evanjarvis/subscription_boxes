@@ -56,6 +56,14 @@
 		<option value="small">Small</option>
 		<option value="large">Large</option>
 	</select><br>
+	Preferences:<br>
+	<select name="preferences">
+		<option value="candy">Candy</option>
+		<option value="cereal">Cereal</option>
+		<option value="condiment">Condiment</option>
+		<option value="drink">Drink</option>
+		<option value="snack">Snack</option>
+	</select><br>
 	Select 3 favorites you might like to receive each box:<br>
 	<?php
         	include('dbinfo.php');
@@ -76,7 +84,7 @@
 			echo ('<input type="checkbox" name="favorite" onchange="checkBox(this)" value="' . $row[0] . '">' . $row[0] . '<br>');
 		}	
 	?>
-	
+	<br>	
 	<input type="submit" name="submit" value="Submit Subscription" required/>
 </form>
 </div>
