@@ -81,7 +81,7 @@
 		}
 		for($i=0; $i < mysqli_num_rows($result); $i++){
 			$row = mysqli_fetch_row($result);
-			echo ('<input type="checkbox" name="favorite" onchange="checkBox(this)" value="' . $row[0] . '">' . $row[0] . '<br>');
+			echo ('<input type="checkbox" name="favorite[]" onchange="checkBox(this)" value="' . $row[0] . '">' . $row[0] . '<br>');
 		}	
 	?>
 	<br>	
