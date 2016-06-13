@@ -21,7 +21,7 @@
                 <option value="October">October</option>
                 <option value="November">November</option>
                 <option value="December">December</option>
-	</select><br><br>
+	</select><br>
 	Starting Year:<br>
 	<select name="startyear">
 		<option value="2017">2017</option>
@@ -29,7 +29,7 @@
 		<option value="2019">2019</option>
 		<option value="2020">2020</option>
 		<option value="2021">2021</option>
-	</select><br><br>
+	</select><br>
 	Subscription Length:<br>
 	<select name="sub_length">
 		<option value="1">1 month or less</option>
@@ -44,13 +44,14 @@
 		<option value="10">10 months</option>
 		<option value="11">11 months</option>
 		<option value="12">12 months</option>
-	</select><br><br>
+	</select><br>
 	Box Frequency:<br>
 	<select name="box_freq">
 		<option value="bi-weekly">Bi-weekly</option>
 		<option value="monthly">Monthly</option>
 		<option value="bi-monthly">Bi-monthly</option>
-	</select><br><br>
+	</select><br>
+	
 	<input type="submit" name="submit" value="Submit Subscription" required/>
 </form>
 

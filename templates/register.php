@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="eng-US">
-<?php header( "refresh:1;url=../index.php" );  ?>
+<?php header( "refresh:1;url=../index.php#new_account.php" );  ?>
 <head>
 <meta charset="utf-8">
 <title>UMW Subscription Boxes</title>
