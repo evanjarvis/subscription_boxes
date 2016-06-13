@@ -51,6 +51,11 @@
 		<option value="monthly">Monthly</option>
 		<option value="bi-monthly">Bi-monthly</option>
 	</select><br>
+	Box Size:<br>
+	<select name="box_size">
+		<option value="small">Small</option>
+		<option value="large">Large</option>
+	</select><br>
 	
 	<input type="submit" name="submit" value="Submit Subscription" required/>
 </form>
