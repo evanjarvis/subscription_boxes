@@ -39,12 +39,7 @@
 				$password = FALSE;
 				$msg .= '<p>You must enter in a password.</p>';
 			}else{
-				if($_POST['password'] == $_POST['password_confirm']){
 					$password = mysqli_real_escape_string($conn, $_POST['password']);
-				}else{
-					$password = FALSE;
-					$msg .= '<p>The passwords you entered do not match.</p>';
-				}
 			}
 
 			//checks email
@@ -91,24 +86,26 @@
 				$box_size = mysqli_real_escape_string($conn, $_POST['box_size']);
 			}
 
-			if(empty($_POST['favorite'][0])){
+			$fav = $_POST['favorite'];
+
+			if(empty($fav[0])){
 				$favorite1 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$favorite1 = mysqli_real_escape_string($conn, $_POST['favorite1']);
+				$favorite1 = mysqli_real_escape_string($conn, $fav[0]);
 			}
-			if(empty($_POST['favorite'][1])){
+			if(empty($fav[1])){
 				$favorite2 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$favorite2 = mysqli_real_escape_string($conn, $_POST['favorite2']);
+				$favorite2 = mysqli_real_escape_string($conn, $fav[1]);
 			}
 
-			if(empty($_POST['favorite'][2])){
+			if(empty($fav[2])){
 				$favorite3 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
-				$favorite3 = mysqli_real_escape_string($conn, $_POST['favorite3']);
+				$favorite3 = mysqli_real_escape_string($conn, $fav[2]);
 			}
 
 			if(empty($_POST['preferences'])){
@@ -125,20 +122,20 @@
 				$result = @mysqli_query($conn, $query);
 				if(mysqli_num_rows($result) == 1){
 					$row = mysqli_fetch_row($result);
-					$id = row[0];
+					$id = $row[0];
 					//where INSERT $query info gets inserted into subscription database
-					$query = "INSERT INTO user_pref (id, start_month, start_year, sub_length, box_freq, box_size, favorite1, favorite2, favorite3, preferences) VALUES('$id', '$start_month', '$start_year', $sub_length', '$box_freq', '$box_size', '$favorite1', '$favorite2', $favorite3', '$preferences')";
+					$query = "INSERT INTO user_pref (id, start_month, start_year, sub_length, box_freq, box_size, favorite1, favorite2, favorite3, preferences) VALUES('$id', '$startmonth', '$startyear', '$sub_length', '$box_freq', '$box_size', '$favorite1', '$favorite2', '$favorite3', '$preferences')";
 					$result = @mysqli_query($conn, $query);
 				//when registration info is good
 					if($result){
-						echo '<p>You have successfully registered.</p>';
+						echo ('<p>You have successfully registered.</p>');
 					}else{
 						$msg .= '<p>We could not register you at this time.</p><p>' . 
 						mysqli_error() . '</p>';
 					}
 
 				}else{
-					$msg .= '<p>That email is already in use.</p>';
+					$msg .= '<p>That email does not match any in our records.</p>';
 				}
 				mysqli_close();
 			}else{
