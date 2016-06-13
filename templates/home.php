@@ -1,5 +1,6 @@
 <div id="guts">
-<p>Welcome to our page! This site is under construction.  We are a subscription-box service for students studying abroad.  Be sure to check back later when our site is live!</p>
+<h2>Welcome!</h2>
+<p>We are a subscription-box service for students studying abroad.  If you or someone you know is participating in the UMW study abroad programme, you can have boxes of your favourite goodies from home delivered regularly</p>
 
-<p>We are building this site with the awesome HTML and Javascript     skills learned in CPSC 348 (with a bit of jQuery too!)</p>
+<p>You can cancel or modify your subscription at any time.  Just enter your account information on the <a href="signup.php">Sign Up</a> page and choose your modifications.</p>
 </div>
