@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	
+
+	/*  This is where the information displayed gets loaded based on which
+	 *  tab is selected. The newhash variable assigns each tab with a 
+	 *  different name, giving it the ability to load new information on
+	 *  one section of the page without reloading the entirety of the page.
+	 */	
 	var newhash = "",
 		$content = $("#content"),
 		$wrapper = $("#wrapper"),

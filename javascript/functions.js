@@ -1,3 +1,4 @@
+// Function used send data selected from the checkboxes to the database.
 function checkBox(item){
 	var box=document.forms['box'].elements['favorite[]'], length=box.length, count = 0;
 	for(var i=0;i<length;i++){

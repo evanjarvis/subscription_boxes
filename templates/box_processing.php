@@ -49,7 +49,7 @@
 			}else{
 				$email = mysqli_real_escape_string($conn, $_POST['email']);
 			}
-			//check starting month
+			//checks starting month
 			if(empty($_POST['startmonth'])){
 				$startmonth = FALSE;
 				$msg .= '<p>You must select a starting month.</p>';
@@ -57,7 +57,7 @@
 				$startmonth = mysqli_real_escape_string($conn, $_POST['startmonth']);
 			}
 
-			//check starting year
+			//checks starting year
 			if(empty($_POST['startyear'])){
 				$startyear = FALSE;
 				$msg .= '<p>You must select a starting year.</p>';
@@ -65,6 +65,7 @@
 				$startyear = mysqli_real_escape_string($conn, $_POST['startyear']);
 			}
 
+			//checks subscription length
 			if(empty($_POST['sub_length'])){
 				$sub_length = FALSE;
 				$msg .= '<p>You must select a subscription length.</p>';
@@ -72,6 +73,7 @@
 				$sub_length = mysqli_real_escape_string($conn, $_POST['sub_length']);
 			}
 
+			//checks subscription box frequency
 			if(empty($_POST['box_freq'])){
 				$box_freq = FALSE;
 				$msg .= '<p>You must select a delivery frequency.</p>';
@@ -79,6 +81,7 @@
 				$box_freq = mysqli_real_escape_string($conn, $_POST['box_freq']);
 			}
 
+			//checks subscription box size
 			if(empty($_POST['box_size'])){
 				$box_size = FALSE;
 				$msg .= '<p>You must select a box size.</p>';
@@ -88,12 +91,15 @@
 
 			$fav = $_POST['favorite'];
 
+			//first favorite selected
 			if(empty($fav[0])){
 				$favorite1 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
 			} else {
 				$favorite1 = mysqli_real_escape_string($conn, $fav[0]);
 			}
+
+			//second favorite selected
 			if(empty($fav[1])){
 				$favorite2 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
@@ -101,6 +107,7 @@
 				$favorite2 = mysqli_real_escape_string($conn, $fav[1]);
 			}
 
+			//third favorite selected
 			if(empty($fav[2])){
 				$favorite3 = FALSE;
 				$msg .= '<p>Please enter three favorites.</p>';
@@ -108,6 +115,7 @@
 				$favorite3 = mysqli_real_escape_string($conn, $fav[2]);
 			}
 
+			//user selected preference
 			if(empty($_POST['preferences'])){
 				$preferences = FALSE;
 				$msg .= '<p>Please enter a preferred item type.</p>';
